@@ -13,23 +13,24 @@
   },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "nx/tasks-runners/default",
-      "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"],
-        "cacheDirectory": "/tmp/nx-cache"
-      }
-    },
-    "cloud": {
       "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"],
-        "cacheDirectory": "/tmp/nx-cache"
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e"
+        ],
+        "cacheDirectory": "/tmp/nx-cache",
+        "accessToken": "ODBjYzNiNzQtZDYxMS00MzNlLWIwMjYtMjU5MGFkYzNjMzNifHJlYWQtd3JpdGU="
       }
     }
   },
   "targetDefaults": {
     "build": {
-      "dependsOn": ["^build"]
+      "dependsOn": [
+        "^build"
+      ]
     }
   },
   "generators": {
